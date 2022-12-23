@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <h1 class="fw-bolder">noxe</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a  *ngIf="islogin"class="nav-link" routerLink="home" routerLinkActive="active">home</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="islogin"class="nav-link" routerLink="about" routerLinkActive="active" >about</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="islogin" class="nav-link" routerLink="moveis" routerLinkActive="active" >movies</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="islogin" class="nav-link" routerLink="tvshow" routerLinkActive="active">tvshow</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="islogin" class="nav-link" routerLink="peoble" routerLinkActive="active">peoble</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="islogin" class="nav-link" routerLink="network" routerLinkActive="active" >network</a>
+          </li>
+          
+          
+          
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div class="social-media d-flex align-items-center">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-spotify"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                
+            </div>
+          <li class="nav-item">
+            <a *ngIf="!islogin" class="nav-link" routerLink="login" routerLinkActive="active">login</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!islogin" class="nav-link" routerLink="regester" routerLinkActive="active" >regester</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="islogin"  (click)="signOut()" class="nav-link" routerLink="logaut" routerLinkActive="active" >logaout</a>
+          </li>
+          
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>

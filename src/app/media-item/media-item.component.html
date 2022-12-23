@@ -1,0 +1,13 @@
+
+    <div class="item position-relative">
+<a [routerLink]="['/details',item.id,item.media_type]"  class="text-decoration-none">
+        <img *ngIf="item.poster_path" class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+item.poster_path" alt="">
+        <img *ngIf="item.profile_path" class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+item.profile_path" alt="">
+
+        <h3 class="h6 py-2">{{item.title|whach}} {{item.name}}</h3>
+
+        <p *ngIf="item.overview">{{item.overview |overview:8}}</p>
+        <div *ngIf="item.vote_average" class="vote position-absolute end-0 top-0 text-white P-2">{{item.vote_average.toFixed(2)}}</div>
+    </a>
+    </div>
+
